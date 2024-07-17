@@ -186,6 +186,8 @@
 			// 
 			// gridView1
 			// 
+			this.gridView1.AppearancePrint.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.gridView1.AppearancePrint.HeaderPanel.Options.UseBackColor = true;
 			this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn4,
             this.gridColumn5,
@@ -193,6 +195,7 @@
 			this.gridView1.GridControl = this.gcchonmon;
 			this.gridView1.Name = "gridView1";
 			this.gridView1.OptionsCustomization.AllowGroup = false;
+			this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
 			this.gridView1.OptionsView.ShowGroupPanel = false;
 			this.gridView1.OptionsView.ShowViewCaption = true;
 			this.gridView1.ViewCaption = "Món đã gọi";

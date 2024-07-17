@@ -49,11 +49,6 @@ namespace QLNhaHang
         {
             OpemForm(typeof(fmNhapHang));
         }
-        public void moform()
-        {
-            OpemForm(typeof(fmNhapHang));
-        }
-
         private void btnXuatHang_ItemClick(object sender, ItemClickEventArgs e)
         {
             OpemForm(typeof(fmXuatHang));

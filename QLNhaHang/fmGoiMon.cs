@@ -21,7 +21,6 @@ namespace QLNhaHang
         List<MONANCBDTO> LsTenMon = MonAnDAO.Instance.ListTenMon();
         List<MonAnDTO> lismonan = new List<MonAnDTO>();
         Dictionary<int, int> IDSL = new Dictionary<int, int>();
-        int sltamthoi = 0;
         public fmGoiMon()
         {
             InitializeComponent();
@@ -49,7 +48,7 @@ namespace QLNhaHang
             int slyeucau = 1;
             int idcongthuc = 0;
             DialogResult result = MessageBox.Show("Bạn muốn đặt món", "Đặt Món", MessageBoxButtons.YesNo);
-            if (result == System.Windows.Forms.DialogResult.Yes && lismonan != MonAnDAO.Instance.LisMonAn1(_name) && lismonan.Count != 0)
+            if (result == System.Windows.Forms.DialogResult.Yes && lismonan != MonAnDAO.Instance.LisMonAn1(_name) && lismonan.Count > 0)
             {
                 foreach (MonAnDTO item in lismonan)
                 {
@@ -86,12 +85,12 @@ namespace QLNhaHang
                         }
                     }
                     bool updategoimon = true;
-                    if (item.IDGoiMon != 0)
+                    if (item.IDGoiMon > 0)
                     {
                         bool data = MonAnDAO.Instance.updatedatmon(item.SoLuong - slmon[0], item.IDGoiMon);
                         updategoimon = false;
                     }
-                    if (updategoimon && sl != 0)
+                    if (updategoimon && sl > 0)
                     {
                         if (_name == "")
                         {
@@ -99,7 +98,7 @@ namespace QLNhaHang
                         }
                         bool data = MonAnDAO.Instance.insert(sl, item.TenMonAn, Tenban);
                     }
-                    if(sl > 0 && slmon[0] != 0)
+                    if(sl > 0 && slmon[0] > 0)
                     {
                         MessageBox.Show("Bạn còn đủ nguyên liệu để làm " + sl + " món " + item.TenMonAn);
                     }
@@ -160,7 +159,6 @@ namespace QLNhaHang
                 if (lismonan.Count == 0)
                 {
                     IDSL.Add(dto.IDMonAn, dto.SoLuong);
-                    sltamthoi += dto.SoLuong;
                     lismonan.Add(dto);
                 }
                 else
@@ -174,9 +172,8 @@ namespace QLNhaHang
                         if (lismonan[i].TenMonAn == dto.TenMonAn)
                         {
                             lismonan[i].SoLuong += dto.SoLuong;
-                            sltamthoi += dto.SoLuong;
                             themmoi = false;
-                            IDSL[dto.IDMonAn] = sltamthoi;
+                            IDSL[dto.IDMonAn] += dto.SoLuong;
                         }
                     }
                     if (themmoi)
