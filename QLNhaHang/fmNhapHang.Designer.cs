@@ -76,7 +76,6 @@
 			this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.OFdialog = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
-			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -647,10 +646,6 @@
 			// 
 			this.OFdialog.FileName = "OpenFile";
 			// 
-			// openFileDialog1
-			// 
-			this.openFileDialog1.FileName = "openFileDialog1";
-			// 
 			// fmNhapHang
 			// 
 			this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -743,7 +738,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
 		private DevExpress.XtraEditors.XtraOpenFileDialog OFdialog;
-		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.Label lbPath;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
 	}
