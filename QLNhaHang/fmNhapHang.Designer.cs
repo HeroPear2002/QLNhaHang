@@ -76,6 +76,8 @@
 			this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.OFdialog = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
+			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.cbChonCam = new System.Windows.Forms.ComboBox();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -106,10 +108,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.cbChonCam);
 			this.layoutControl1.Controls.Add(this.lbPath);
 			this.layoutControl1.Controls.Add(this.btnCapNhat);
 			this.layoutControl1.Controls.Add(this.txtIDNhapHang);
@@ -138,7 +142,7 @@
 			this.lbPath.ForeColor = System.Drawing.Color.Black;
 			this.lbPath.Location = new System.Drawing.Point(12, 12);
 			this.lbPath.Name = "lbPath";
-			this.lbPath.Size = new System.Drawing.Size(375, 26);
+			this.lbPath.Size = new System.Drawing.Size(66, 26);
 			this.lbPath.TabIndex = 15;
 			this.lbPath.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
@@ -147,7 +151,7 @@
 			this.btnCapNhat.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.btnCapNhat.Appearance.Options.UseBackColor = true;
 			this.btnCapNhat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCapNhat.ImageOptions.SvgImage")));
-			this.btnCapNhat.Location = new System.Drawing.Point(875, 86);
+			this.btnCapNhat.Location = new System.Drawing.Point(878, 86);
 			this.btnCapNhat.Name = "btnCapNhat";
 			this.btnCapNhat.Size = new System.Drawing.Size(215, 36);
 			this.btnCapNhat.StyleController = this.layoutControl1;
@@ -157,9 +161,9 @@
 			// 
 			// txtIDNhapHang
 			// 
-			this.txtIDNhapHang.Location = new System.Drawing.Point(489, 12);
+			this.txtIDNhapHang.Location = new System.Drawing.Point(431, 12);
 			this.txtIDNhapHang.Name = "txtIDNhapHang";
-			this.txtIDNhapHang.Size = new System.Drawing.Size(92, 20);
+			this.txtIDNhapHang.Size = new System.Drawing.Size(150, 20);
 			this.txtIDNhapHang.TabIndex = 13;
 			// 
 			// txtLuongTon
@@ -406,9 +410,10 @@
             this.emptySpaceItem7,
             this.emptySpaceItem8,
             this.emptySpaceItem9,
-            this.layoutControlItem11,
+            this.layoutControlItem12,
+            this.layoutControlItem13,
             this.emptySpaceItem10,
-            this.layoutControlItem12});
+            this.layoutControlItem11});
 			this.Root.Name = "Root";
 			this.Root.Size = new System.Drawing.Size(1918, 688);
 			this.Root.TextVisible = false;
@@ -484,9 +489,9 @@
 			// emptySpaceItem2
 			// 
 			this.emptySpaceItem2.AllowHotTrack = false;
-			this.emptySpaceItem2.Location = new System.Drawing.Point(1082, 74);
+			this.emptySpaceItem2.Location = new System.Drawing.Point(1085, 74);
 			this.emptySpaceItem2.Name = "emptySpaceItem2";
-			this.emptySpaceItem2.Size = new System.Drawing.Size(816, 40);
+			this.emptySpaceItem2.Size = new System.Drawing.Size(813, 40);
 			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// emptySpaceItem3
@@ -533,9 +538,9 @@
 			this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
 			this.layoutControlItem10.AppearanceItemCaption.Options.UseForeColor = true;
 			this.layoutControlItem10.Control = this.txtIDNhapHang;
-			this.layoutControlItem10.Location = new System.Drawing.Point(379, 0);
+			this.layoutControlItem10.Location = new System.Drawing.Point(321, 0);
 			this.layoutControlItem10.Name = "layoutControlItem10";
-			this.layoutControlItem10.Size = new System.Drawing.Size(194, 30);
+			this.layoutControlItem10.Size = new System.Drawing.Size(252, 30);
 			this.layoutControlItem10.Text = "ID Nhập Hàng:";
 			this.layoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.layoutControlItem10.TextSize = new System.Drawing.Size(93, 19);
@@ -619,7 +624,7 @@
 			// layoutControlItem11
 			// 
 			this.layoutControlItem11.Control = this.btnCapNhat;
-			this.layoutControlItem11.Location = new System.Drawing.Point(863, 74);
+			this.layoutControlItem11.Location = new System.Drawing.Point(866, 74);
 			this.layoutControlItem11.Name = "layoutControlItem11";
 			this.layoutControlItem11.Size = new System.Drawing.Size(219, 40);
 			this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
@@ -630,7 +635,7 @@
 			this.emptySpaceItem10.AllowHotTrack = false;
 			this.emptySpaceItem10.Location = new System.Drawing.Point(842, 74);
 			this.emptySpaceItem10.Name = "emptySpaceItem10";
-			this.emptySpaceItem10.Size = new System.Drawing.Size(21, 40);
+			this.emptySpaceItem10.Size = new System.Drawing.Size(24, 40);
 			this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// layoutControlItem12
@@ -638,13 +643,33 @@
 			this.layoutControlItem12.Control = this.lbPath;
 			this.layoutControlItem12.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem12.Name = "layoutControlItem12";
-			this.layoutControlItem12.Size = new System.Drawing.Size(379, 30);
+			this.layoutControlItem12.Size = new System.Drawing.Size(70, 30);
 			this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem12.TextVisible = false;
 			// 
 			// OFdialog
 			// 
 			this.OFdialog.FileName = "OpenFile";
+			// 
+			// layoutControlItem13
+			// 
+			this.layoutControlItem13.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+			this.layoutControlItem13.AppearanceItemCaption.Options.UseForeColor = true;
+			this.layoutControlItem13.Control = this.cbChonCam;
+			this.layoutControlItem13.Location = new System.Drawing.Point(70, 0);
+			this.layoutControlItem13.Name = "layoutControlItem13";
+			this.layoutControlItem13.Size = new System.Drawing.Size(251, 30);
+			this.layoutControlItem13.Text = "Chọn Cam";
+			this.layoutControlItem13.TextSize = new System.Drawing.Size(66, 19);
+			// 
+			// cbChonCam
+			// 
+			this.cbChonCam.FormattingEnabled = true;
+			this.cbChonCam.Location = new System.Drawing.Point(151, 12);
+			this.cbChonCam.Name = "cbChonCam";
+			this.cbChonCam.Size = new System.Drawing.Size(178, 27);
+			this.cbChonCam.TabIndex = 16;
+			this.cbChonCam.SelectedValueChanged += new System.EventHandler(this.cbChonCam_SelectedValueChanged);
 			// 
 			// fmNhapHang
 			// 
@@ -688,6 +713,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -740,5 +766,7 @@
 		private DevExpress.XtraEditors.XtraOpenFileDialog OFdialog;
 		private System.Windows.Forms.Label lbPath;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+		private System.Windows.Forms.ComboBox cbChonCam;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
 	}
 }

@@ -12,6 +12,9 @@ using DAO;
 using DTO;
 using ExcelDataReader;
 using System.IO;
+using AForge.Video.DirectShow;
+using AForge.Video;
+using ZXing;
 
 namespace QLNhaHang
 {
@@ -21,8 +24,9 @@ namespace QLNhaHang
         {
             InitializeComponent();
             LoadControl();
-
         }
+		FilterInfoCollection filterInfoCollection;
+		VideoCaptureDevice videoCaptureDevice;
         List<ThucPhamDTO> LsTenTp = ThucPhamDAO.Instance.GetList();
 		DataTableCollection data;
 		private void LoadControl()
@@ -34,6 +38,16 @@ namespace QLNhaHang
 
         private void LoadData()
         {
+			filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+			foreach (FilterInfo item in filterInfoCollection)
+			{
+				cbChonCam.Items.Add(item.Name);
+			}
+			if(cbChonCam.SelectedValue != null)
+			{
+				cbChonCam.SelectedIndex = 0;
+			}
+			
             slChonTP.Properties.DataSource = LsTenTp;
             slChonTP.Properties.DisplayMember = "TenThucPham";
             slChonTP.Properties.ValueMember = "IDThucPham";
@@ -46,7 +60,6 @@ namespace QLNhaHang
             txtLuongTon.Text = string.Empty;
             txtIDNhapHang.Text = string.Empty;
             slChonTP.Text = string.Empty;
-
         }
 
         private void LockControl(bool v)
@@ -130,17 +143,31 @@ namespace QLNhaHang
 			}
 			else
 			{
+				string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+				string pathfull;
+				string[] File = Directory.GetFiles(path);
+				foreach (string item in File)
+				{
+					if(item == lbPath.Text + ".xlsx")
+					{
+						lbPath.Text = lbPath.Text + ".xlsx";
+						pathfull = Path.Combine(path, lbPath.Text);
+					}
+					else if(item == lbPath.Text + ".xls")
+					{
+						lbPath.Text = lbPath.Text + ".xls";
+						pathfull = Path.Combine(path, lbPath.Text);
+					}
+				}
 				foreach (DataRow row in data.Rows)
 				{
-					if (row["TenFile"].ToString() == lbPath.Text + ".xlsx")
+					if (row["TenFile"].ToString() == lbPath.Text)
 					{
 						MessageBox.Show("Đã nhập file này rồi.");
 						return;
 					}
 				}
-				bool insertfile = NhapHangDAO.Instance.insertFile(lbPath.Text + ".xlsx");
-				string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-				lbPath.Text = Path.Combine(path,lbPath.Text+".xlsx");
+				bool insertfile = NhapHangDAO.Instance.insertFile(lbPath.Text);
 				OpenFile(lbPath.Text);
 			}
 			LoadControl();
@@ -221,6 +248,34 @@ namespace QLNhaHang
 		private void Enter_Click(object sender, EventArgs e)
 		{
 			btnThem_Click(sender,e);
+		}
+
+		private void cbChonCam_SelectedValueChanged(object sender, EventArgs e)
+		{
+			if(videoCaptureDevice != null)
+			{
+				if(videoCaptureDevice.IsRunning)
+				{
+					videoCaptureDevice.Stop();
+				}
+			}
+			if (cbChonCam.SelectedValue != null)
+			{
+				videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cbChonCam.SelectedIndex].MonikerString);
+				videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+				videoCaptureDevice.Start();
+			}
+		}
+
+		private void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+		{
+			Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+			BarcodeReader reader = new BarcodeReader();
+			var result = reader.Decode(bitmap);
+			if(result != null)
+			{
+				lbPath.Text = result.ToString();
+			}
 		}
 	}
 }
