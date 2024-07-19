@@ -73,5 +73,17 @@ namespace DAO
                 
             }
         }
+		public DataTable TenFile()
+		{
+			string query = "Select TenFile from tb_File";
+			DataTable data = Dataprovider.Instance.ExecuteQuery(query);
+			return data;
+		}
+		public bool insertFile(string tenfile)
+		{
+			string query = "insert tb_File(TenFile) Values ( @1 )";
+			int data = Dataprovider.Instance.ExecuteNonQuery(query, new object[] { tenfile });
+			return data > 0;
+		}
     }
 }

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DAO;
 using DTO;
+using ExcelDataReader;
+using System.IO;
 
 namespace QLNhaHang
 {
@@ -21,9 +23,9 @@ namespace QLNhaHang
             LoadControl();
 
         }
-        bool them = true;
         List<ThucPhamDTO> LsTenTp = ThucPhamDAO.Instance.GetList();
-        private void LoadControl()
+		DataTableCollection data;
+		private void LoadControl()
         {
             LockControl(true);
             CleanText();
@@ -92,43 +94,84 @@ namespace QLNhaHang
                 istrangthai = 0;
             }
             else
-                istrangthai = 1;
-            if (them)
-            {
-                bool insert = NhapHangDAO.Instance.Insert(idthucpham, soluongnhap, ngaynhap);
-                if (insert)
-                {
-                    MessageBox.Show("Thanh Cong");
-                    return;
-                }
-                MessageBox.Show("That Bai");
-
-            }
-            else
-            {
-                int idnhaphang = int.Parse(gridView1.GetFocusedRowCellValue("IDNhapHang").ToString());
-                bool update = NhapHangDAO.Instance.Update(idnhaphang, idthucpham, soluongnhap, ngaynhap, luongton, istrangthai);
-                if (update)
-                {
-                    MessageBox.Show("Thanh Cong");
-                    return;
-                }
-                MessageBox.Show("That Bai");
-            }
+				istrangthai = 1;
+			int idnhaphang = int.Parse(gridView1.GetFocusedRowCellValue("IDNhapHang").ToString());
+			bool update = NhapHangDAO.Instance.Update(idnhaphang, idthucpham, soluongnhap, ngaynhap, luongton, istrangthai);
+			if (update)
+			{
+				MessageBox.Show("Thanh Cong");
+				return;
+			}
+			MessageBox.Show("That Bai");
 
 
         }
-        private void btnThem_Click(object sender, EventArgs e)
+		private void btnThem_Click(object sender, EventArgs e)
         {
-            LockControl(false);
-            them = true;
-            txtLuongTon.Enabled = false;
-        }
-
+			DataTable data = NhapHangDAO.Instance.TenFile();
+			if (lbPath.Text == "")
+			{
+				using (XtraOpenFileDialog Opfile = new XtraOpenFileDialog() { Filter = "Excel Workbook|*.xls;*.xlsx" })
+				{
+					if (Opfile.ShowDialog() == DialogResult.OK)
+					{
+						foreach (DataRow row in data.Rows)
+						{
+							if(row["TenFile"].ToString() == Opfile.SafeFileName)
+							{
+								MessageBox.Show("Đã nhập file này rồi.");
+								return;
+							}
+						}
+						bool insertfile = NhapHangDAO.Instance.insertFile(Opfile.SafeFileName);
+						OpenFile(Opfile.FileName);
+					}
+				}
+			}
+			else
+			{
+				foreach (DataRow row in data.Rows)
+				{
+					if (row["TenFile"].ToString() == lbPath.Text + ".xlsx")
+					{
+						MessageBox.Show("Đã nhập file này rồi.");
+						return;
+					}
+				}
+				bool insertfile = NhapHangDAO.Instance.insertFile(lbPath.Text + ".xlsx");
+				string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+				lbPath.Text = Path.Combine(path,lbPath.Text+".xlsx");
+				OpenFile(lbPath.Text);
+			}
+			LoadControl();
+		}
+		private void OpenFile(string pathfile)
+		{
+			using (var stream = File.Open(pathfile, FileMode.Open, FileAccess.Read))
+			{
+				using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
+				{
+					DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
+					{
+						ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = true }
+					});
+					data = result.Tables;
+					foreach (DataTable dataTable in data)
+					{
+						foreach(DataRow row in dataTable.Rows)
+						{
+							int idthucpham = int.Parse(row["IDThucPham"].ToString());
+							int soluongnhap = int.Parse(row["SoLuong"].ToString());
+							DateTime ngaynhap = DateTime.Now;
+							bool insert = NhapHangDAO.Instance.Insert(idthucpham, soluongnhap, ngaynhap);
+						}
+					}
+				}
+			}
+		}
         private void btnSua_Click(object sender, EventArgs e)
         {
             LockControl(false);
-            them = false;
             txtLuongTon.Enabled = true;
         }
 
@@ -163,7 +206,6 @@ namespace QLNhaHang
                         slChonTP.EditValue = item.IDThucPham;
                     }
                 }
-                
             }
             catch (Exception)
             {
@@ -176,5 +218,9 @@ namespace QLNhaHang
         {
             LoadControl();
         }
-    }
+		private void Enter_Click(object sender, EventArgs e)
+		{
+			btnThem_Click(sender,e);
+		}
+	}
 }

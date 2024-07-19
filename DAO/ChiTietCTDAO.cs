@@ -20,7 +20,7 @@ namespace DAO
         public ChiTietCTDAO() { }
         public List<CongThucDTO> ListCT()
         {
-            string query = "Select * from tb_CongThucMonAn";
+            string query = "Select IDCongThuc , TenCongThuc from tb_CongThucMonAn";
             DataTable data = Dataprovider.Instance.ExecuteQuery(query);
             List<CongThucDTO> lsv = new List<CongThucDTO>();
             foreach (DataRow item in data.Rows)
@@ -30,18 +30,16 @@ namespace DAO
             }
             return lsv;
         }
-        public bool InsertCT(string tencongthuc)
+        public bool InsertCT(string tencongthuc, int idmonan)
         {
-            string query = "insert tb_CongThucMonAn(TenCongThuc) values ( @1 )";
-            int data = Dataprovider.Instance.ExecuteNonQuery(query, new object[] { tencongthuc });
+            string query = "insert tb_CongThucMonAn(TenCongThuc, IDMonAn) values ( @1 , @2 )";
+            int data = Dataprovider.Instance.ExecuteNonQuery(query, new object[] { tencongthuc, idmonan });
             return data > 0;
         }
         public bool DeleteCT(int idcongthuc)
         {
-            string query = "Delete tb_MonAn where IDCongThuc = @1 ";
             string query1 = "Delete tb_ChiTietCT where IDCongThuc = @1 ";
             string query2 = "Delete tb_CongThucMonAn where IDCongThuc = @1 ";
-            int data = Dataprovider.Instance.ExecuteNonQuery(query, new object[] { idcongthuc });
             int data1 = Dataprovider.Instance.ExecuteNonQuery(query1, new object[] { idcongthuc });
             int data2 = Dataprovider.Instance.ExecuteNonQuery(query2, new object[] { idcongthuc });
             return data2 > 0;

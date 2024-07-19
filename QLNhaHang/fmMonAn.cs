@@ -32,9 +32,6 @@ namespace QLNhaHang
 
         private void LoadData()
         {
-            slChonCT.Properties.DataSource = lisCT;
-            slChonCT.Properties.DisplayMember = "TenCongThuc";
-            slChonCT.Properties.ValueMember = "IDCongThuc";
             gridControl1.DataSource = MonAnTDAO.Instance.GetList();
         }
 
@@ -42,7 +39,6 @@ namespace QLNhaHang
         {
             txtTenMon.Text = string.Empty;
             txtGia.Text = string.Empty;
-            slChonCT.Text = string.Empty;
 
         }
 
@@ -52,7 +48,6 @@ namespace QLNhaHang
             {
                 txtTenMon.Enabled = false;
                 txtGia.Enabled = false;
-                slChonCT.Enabled = false;
                 btnThem.Enabled = true;
                 btnSua.Enabled = true;
                 btnXoa.Enabled = true;
@@ -62,7 +57,6 @@ namespace QLNhaHang
             {
                 txtTenMon.Enabled = true;
                 txtGia.Enabled = true;
-                slChonCT.Enabled = true;
                 btnThem.Enabled = false;
                 btnSua.Enabled = false;
                 btnXoa.Enabled = false;
@@ -73,11 +67,10 @@ namespace QLNhaHang
         void Save()
         {
             float gia = float.Parse(txtGia.Text);
-            int idcongthuc = int.Parse(slChonCT.EditValue.ToString());
             string tenmon = txtTenMon.Text;
             if (them)
             {
-                bool insert = MonAnTDAO.Instance.Insert(tenmon, gia, idcongthuc);
+                bool insert = MonAnTDAO.Instance.Insert(tenmon, gia);
                 if (insert)
                 {
                     MessageBox.Show("Thanh Cong");
@@ -89,7 +82,7 @@ namespace QLNhaHang
             else
             {
                 int idmonan = int.Parse(gridView1.GetFocusedRowCellValue("IDMonAn").ToString());
-                bool update = MonAnTDAO.Instance.Update(idmonan, tenmon, gia, idcongthuc);
+                bool update = MonAnTDAO.Instance.Update(idmonan, tenmon, gia);
                 if (update)
                 {
                     MessageBox.Show("Thanh Cong");
@@ -148,14 +141,6 @@ namespace QLNhaHang
             {
                 txtTenMon.Text = gridView1.GetFocusedRowCellValue("TenMon").ToString();
                 txtGia.Text = gridView1.GetFocusedRowCellValue("Gia").ToString();
-                string tenct = gridView1.GetFocusedRowCellValue("TenCongThuc").ToString();
-                foreach (CongThucDTO item in lisCT)
-                {
-                    if (item.TenCongThuc == tenct)
-                    {
-                        slChonCT.EditValue = item.IDCongThuc;
-                    }
-                }
             }
             catch (Exception)
             {

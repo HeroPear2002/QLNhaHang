@@ -21,20 +21,20 @@ namespace DAO
 
         public DataTable GetList()
         {
-            string query = "select IDMonAn, TenMon, Gia, TenCongThuc, IsMonAn from tb_MonAn ma join tb_CongThucMonAn ctma on ma.IDCongThuc = ctma.IDCongThuc";
+            string query = "select IDMonAn, TenMon, Gia, IsMonAn from tb_MonAn";
             DataTable data = Dataprovider.Instance.ExecuteQuery(query);
             return data;
         }
-        public bool Insert(string tenmon, float gia, int idcongthuc)
+        public bool Insert(string tenmon, float gia)
         {
-            string query = "insert tb_MonAn(TenMon, Gia, IDCongThuc, IsMonAn) values ( @1 , @2 , @3 , 1)";
-            int data = Dataprovider.Instance.ExecuteNonQuery(query, new object[] { tenmon, gia, idcongthuc });
+            string query = "insert tb_MonAn(TenMon, Gia, IsMonAn) values ( @1 , @2 , 1)";
+            int data = Dataprovider.Instance.ExecuteNonQuery(query, new object[] { tenmon, gia });
             return data > 0;
         }
-        public bool Update(int idmonan, string tenmon, float gia, int idcongthuc)
+        public bool Update(int idmonan, string tenmon, float gia)
         {
-            string query = "update tb_MonAn set TenMon = @1 , Gia = @2 , IDCongThuc = @3 where IDMonAn = @4 ";
-            int data = Dataprovider.Instance.ExecuteNonQuery(query, new object[] { tenmon, gia, idcongthuc, idmonan });
+            string query = "update tb_MonAn set TenMon = @1 , Gia = @2  where IDMonAn = @3 ";
+            int data = Dataprovider.Instance.ExecuteNonQuery(query, new object[] { tenmon, gia,  idmonan });
             return data > 0;
         }
         public bool Update(int idmonan, int ismonan)
