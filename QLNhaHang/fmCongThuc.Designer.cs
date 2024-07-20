@@ -130,7 +130,6 @@
 			// 
 			// layoutControl1
 			// 
-			this.layoutControl1.BackColor = System.Drawing.Color.AntiqueWhite;
 			this.layoutControl1.Controls.Add(this.btnThemMon);
 			this.layoutControl1.Controls.Add(this.slChonMon);
 			this.layoutControl1.Controls.Add(this.gridControl1);
@@ -242,7 +241,7 @@
 			// 
 			// btnCapNhat
 			// 
-			this.btnCapNhat.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnCapNhat.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnCapNhat.Appearance.Options.UseBackColor = true;
 			this.btnCapNhat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCapNhat.ImageOptions.SvgImage")));
 			this.btnCapNhat.Location = new System.Drawing.Point(1451, 634);
@@ -255,7 +254,7 @@
 			// 
 			// btnLuu
 			// 
-			this.btnLuu.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnLuu.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnLuu.Appearance.Options.UseBackColor = true;
 			this.btnLuu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLuu.ImageOptions.SvgImage")));
 			this.btnLuu.Location = new System.Drawing.Point(1701, 634);
@@ -268,7 +267,7 @@
 			// 
 			// btnXoaTP
 			// 
-			this.btnXoaTP.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnXoaTP.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnXoaTP.Appearance.Options.UseBackColor = true;
 			this.btnXoaTP.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaTP.ImageOptions.Image")));
 			this.btnXoaTP.Location = new System.Drawing.Point(1687, 63);
@@ -281,7 +280,7 @@
 			// 
 			// btnThemTP
 			// 
-			this.btnThemTP.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnThemTP.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnThemTP.Appearance.Options.UseBackColor = true;
 			this.btnThemTP.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThemTP.ImageOptions.SvgImage")));
 			this.btnThemTP.Location = new System.Drawing.Point(1447, 63);
@@ -327,7 +326,7 @@
 			// 
 			// btnXoa
 			// 
-			this.btnXoa.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnXoa.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnXoa.Appearance.Options.UseBackColor = true;
 			this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
 			this.btnXoa.Location = new System.Drawing.Point(1701, 12);
@@ -340,7 +339,7 @@
 			// 
 			// btnThem
 			// 
-			this.btnThem.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnThem.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnThem.Appearance.Options.UseBackColor = true;
 			this.btnThem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThem.ImageOptions.SvgImage")));
 			this.btnThem.Location = new System.Drawing.Point(1481, 12);

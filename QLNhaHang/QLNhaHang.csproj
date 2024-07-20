@@ -285,6 +285,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticEllipes.cs" />
     <EmbeddedResource Include="fmCongThuc.resx">
       <DependentUpon>fmCongThuc.cs</DependentUpon>
     </EmbeddedResource>

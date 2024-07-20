@@ -130,7 +130,7 @@
 			// 
 			// lbTen
 			// 
-			this.lbTen.BackColor = System.Drawing.Color.PaleTurquoise;
+			this.lbTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
 			this.lbTen.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lbTen.ForeColor = System.Drawing.Color.Red;
 			this.lbTen.Location = new System.Drawing.Point(12, 12);
@@ -150,7 +150,7 @@
 			// 
 			// btnchonmon
 			// 
-			this.btnchonmon.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+			this.btnchonmon.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnchonmon.Appearance.Options.UseBackColor = true;
 			this.btnchonmon.Location = new System.Drawing.Point(816, 83);
 			this.btnchonmon.Name = "btnchonmon";
@@ -465,7 +465,7 @@
 			// 
 			// fmGoiMon
 			// 
-			this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+			this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.Appearance.Options.UseBackColor = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

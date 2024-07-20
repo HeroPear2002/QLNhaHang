@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Runtime.InteropServices;
 
 namespace QLNhaHang
 {
@@ -16,6 +17,11 @@ namespace QLNhaHang
 		public fmTest()
 		{
 			InitializeComponent();
+		}
+
+		private void fmTest_Load(object sender, EventArgs e)
+		{
+			StaticEllipes.Ellipes(simpleButton1,3,30,30);
 		}
 	}
 }

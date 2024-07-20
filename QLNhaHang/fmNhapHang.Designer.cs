@@ -31,6 +31,7 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmNhapHang));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.cbChonCam = new System.Windows.Forms.ComboBox();
 			this.lbPath = new System.Windows.Forms.Label();
 			this.btnCapNhat = new DevExpress.XtraEditors.SimpleButton();
 			this.txtIDNhapHang = new System.Windows.Forms.TextBox();
@@ -72,12 +73,11 @@
 			this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.OFdialog = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
 			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.cbChonCam = new System.Windows.Forms.ComboBox();
+			this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.OFdialog = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -105,10 +105,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
@@ -135,6 +135,15 @@
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
+			// cbChonCam
+			// 
+			this.cbChonCam.FormattingEnabled = true;
+			this.cbChonCam.Location = new System.Drawing.Point(151, 12);
+			this.cbChonCam.Name = "cbChonCam";
+			this.cbChonCam.Size = new System.Drawing.Size(178, 27);
+			this.cbChonCam.TabIndex = 16;
+			this.cbChonCam.SelectedValueChanged += new System.EventHandler(this.cbChonCam_SelectedValueChanged);
+			// 
 			// lbPath
 			// 
 			this.lbPath.BackColor = System.Drawing.Color.White;
@@ -148,7 +157,7 @@
 			// 
 			// btnCapNhat
 			// 
-			this.btnCapNhat.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnCapNhat.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnCapNhat.Appearance.Options.UseBackColor = true;
 			this.btnCapNhat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCapNhat.ImageOptions.SvgImage")));
 			this.btnCapNhat.Location = new System.Drawing.Point(878, 86);
@@ -288,7 +297,7 @@
 			// 
 			// btnXoa
 			// 
-			this.btnXoa.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnXoa.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnXoa.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.btnXoa.Appearance.BorderColor = System.Drawing.Color.Black;
 			this.btnXoa.Appearance.Options.UseBackColor = true;
@@ -304,7 +313,7 @@
 			// 
 			// btnSua
 			// 
-			this.btnSua.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnSua.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnSua.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.btnSua.Appearance.BorderColor = System.Drawing.Color.Black;
 			this.btnSua.Appearance.Options.UseBackColor = true;
@@ -320,7 +329,7 @@
 			// 
 			// btnLuu
 			// 
-			this.btnLuu.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnLuu.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnLuu.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.btnLuu.Appearance.BorderColor = System.Drawing.Color.Black;
 			this.btnLuu.Appearance.Options.UseBackColor = true;
@@ -336,7 +345,7 @@
 			// 
 			// btnThem
 			// 
-			this.btnThem.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnThem.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnThem.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
 			this.btnThem.Appearance.BorderColor = System.Drawing.Color.Black;
 			this.btnThem.Appearance.Options.UseBackColor = true;
@@ -621,23 +630,6 @@
 			this.emptySpaceItem9.Text = "emptySpaceItem1";
 			this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
 			// 
-			// layoutControlItem11
-			// 
-			this.layoutControlItem11.Control = this.btnCapNhat;
-			this.layoutControlItem11.Location = new System.Drawing.Point(866, 74);
-			this.layoutControlItem11.Name = "layoutControlItem11";
-			this.layoutControlItem11.Size = new System.Drawing.Size(219, 40);
-			this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem11.TextVisible = false;
-			// 
-			// emptySpaceItem10
-			// 
-			this.emptySpaceItem10.AllowHotTrack = false;
-			this.emptySpaceItem10.Location = new System.Drawing.Point(842, 74);
-			this.emptySpaceItem10.Name = "emptySpaceItem10";
-			this.emptySpaceItem10.Size = new System.Drawing.Size(24, 40);
-			this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
-			// 
 			// layoutControlItem12
 			// 
 			this.layoutControlItem12.Control = this.lbPath;
@@ -646,10 +638,6 @@
 			this.layoutControlItem12.Size = new System.Drawing.Size(70, 30);
 			this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem12.TextVisible = false;
-			// 
-			// OFdialog
-			// 
-			this.OFdialog.FileName = "OpenFile";
 			// 
 			// layoutControlItem13
 			// 
@@ -662,14 +650,26 @@
 			this.layoutControlItem13.Text = "Chọn Cam";
 			this.layoutControlItem13.TextSize = new System.Drawing.Size(66, 19);
 			// 
-			// cbChonCam
+			// emptySpaceItem10
 			// 
-			this.cbChonCam.FormattingEnabled = true;
-			this.cbChonCam.Location = new System.Drawing.Point(151, 12);
-			this.cbChonCam.Name = "cbChonCam";
-			this.cbChonCam.Size = new System.Drawing.Size(178, 27);
-			this.cbChonCam.TabIndex = 16;
-			this.cbChonCam.SelectedValueChanged += new System.EventHandler(this.cbChonCam_SelectedValueChanged);
+			this.emptySpaceItem10.AllowHotTrack = false;
+			this.emptySpaceItem10.Location = new System.Drawing.Point(842, 74);
+			this.emptySpaceItem10.Name = "emptySpaceItem10";
+			this.emptySpaceItem10.Size = new System.Drawing.Size(24, 40);
+			this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// layoutControlItem11
+			// 
+			this.layoutControlItem11.Control = this.btnCapNhat;
+			this.layoutControlItem11.Location = new System.Drawing.Point(866, 74);
+			this.layoutControlItem11.Name = "layoutControlItem11";
+			this.layoutControlItem11.Size = new System.Drawing.Size(219, 40);
+			this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem11.TextVisible = false;
+			// 
+			// OFdialog
+			// 
+			this.OFdialog.FileName = "OpenFile";
 			// 
 			// fmNhapHang
 			// 
@@ -710,10 +710,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
 			this.ResumeLayout(false);
 
         }

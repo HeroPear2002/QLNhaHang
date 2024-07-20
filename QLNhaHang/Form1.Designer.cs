@@ -50,6 +50,10 @@
 			this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.btnThanhToanTongBan = new DevExpress.XtraEditors.SimpleButton();
 			this.lbTongTien = new System.Windows.Forms.Label();
+			this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+			this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -61,6 +65,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
@@ -85,9 +93,9 @@
 			// 
 			this.btngopban.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btngopban.Appearance.Options.UseBackColor = true;
-			this.btngopban.Location = new System.Drawing.Point(1138, 607);
+			this.btngopban.Location = new System.Drawing.Point(1148, 607);
 			this.btngopban.Name = "btngopban";
-			this.btngopban.Size = new System.Drawing.Size(161, 24);
+			this.btngopban.Size = new System.Drawing.Size(111, 24);
 			this.btngopban.StyleController = this.layoutControl1;
 			this.btngopban.TabIndex = 9;
 			this.btngopban.Text = "Gộp Bàn";
@@ -97,9 +105,9 @@
 			// 
 			this.btnThanhToan.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnThanhToan.Appearance.Options.UseBackColor = true;
-			this.btnThanhToan.Location = new System.Drawing.Point(1749, 607);
+			this.btnThanhToan.Location = new System.Drawing.Point(1761, 607);
 			this.btnThanhToan.Name = "btnThanhToan";
-			this.btnThanhToan.Size = new System.Drawing.Size(159, 24);
+			this.btnThanhToan.Size = new System.Drawing.Size(137, 24);
 			this.btnThanhToan.StyleController = this.layoutControl1;
 			this.btnThanhToan.TabIndex = 8;
 			this.btnThanhToan.Text = "Thanh Toán";
@@ -108,9 +116,9 @@
 			// TongtienThanhToan
 			// 
 			this.TongtienThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.TongtienThanhToan.Location = new System.Drawing.Point(1303, 607);
+			this.TongtienThanhToan.Location = new System.Drawing.Point(1273, 607);
 			this.TongtienThanhToan.Name = "TongtienThanhToan";
-			this.TongtienThanhToan.Size = new System.Drawing.Size(442, 24);
+			this.TongtienThanhToan.Size = new System.Drawing.Size(474, 24);
 			this.TongtienThanhToan.TabIndex = 7;
 			this.TongtienThanhToan.Text = "Tổng tiền: ";
 			// 
@@ -120,7 +128,7 @@
 			this.label1.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.Location = new System.Drawing.Point(1138, 12);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(770, 113);
+			this.label1.Size = new System.Drawing.Size(770, 100);
 			this.label1.TabIndex = 6;
 			this.label1.Text = "Quý khách vui lòng chọn bàn";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -135,10 +143,10 @@
 			// 
 			// gridControl1
 			// 
-			this.gridControl1.Location = new System.Drawing.Point(1138, 129);
+			this.gridControl1.Location = new System.Drawing.Point(1138, 116);
 			this.gridControl1.MainView = this.gridView1;
 			this.gridControl1.Name = "gridControl1";
-			this.gridControl1.Size = new System.Drawing.Size(770, 474);
+			this.gridControl1.Size = new System.Drawing.Size(770, 487);
 			this.gridControl1.TabIndex = 4;
 			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -238,7 +246,11 @@
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.emptySpaceItem1,
+            this.emptySpaceItem2,
+            this.emptySpaceItem3,
+            this.emptySpaceItem4});
 			this.Root.Name = "Root";
 			this.Root.Size = new System.Drawing.Size(1920, 643);
 			this.Root.TextVisible = false;
@@ -246,9 +258,9 @@
 			// layoutControlItem1
 			// 
 			this.layoutControlItem1.Control = this.gridControl1;
-			this.layoutControlItem1.Location = new System.Drawing.Point(1126, 117);
+			this.layoutControlItem1.Location = new System.Drawing.Point(1126, 104);
 			this.layoutControlItem1.Name = "layoutControlItem1";
-			this.layoutControlItem1.Size = new System.Drawing.Size(774, 478);
+			this.layoutControlItem1.Size = new System.Drawing.Size(774, 491);
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem1.TextVisible = false;
 			// 
@@ -266,34 +278,34 @@
 			this.layoutControlItem3.Control = this.label1;
 			this.layoutControlItem3.Location = new System.Drawing.Point(1126, 0);
 			this.layoutControlItem3.Name = "layoutControlItem3";
-			this.layoutControlItem3.Size = new System.Drawing.Size(774, 117);
+			this.layoutControlItem3.Size = new System.Drawing.Size(774, 104);
 			this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem3.TextVisible = false;
 			// 
 			// layoutControlItem4
 			// 
 			this.layoutControlItem4.Control = this.TongtienThanhToan;
-			this.layoutControlItem4.Location = new System.Drawing.Point(1291, 595);
+			this.layoutControlItem4.Location = new System.Drawing.Point(1261, 595);
 			this.layoutControlItem4.Name = "layoutControlItem4";
-			this.layoutControlItem4.Size = new System.Drawing.Size(446, 28);
+			this.layoutControlItem4.Size = new System.Drawing.Size(478, 28);
 			this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem4.TextVisible = false;
 			// 
 			// layoutControlItem5
 			// 
 			this.layoutControlItem5.Control = this.btnThanhToan;
-			this.layoutControlItem5.Location = new System.Drawing.Point(1737, 595);
+			this.layoutControlItem5.Location = new System.Drawing.Point(1749, 595);
 			this.layoutControlItem5.Name = "layoutControlItem5";
-			this.layoutControlItem5.Size = new System.Drawing.Size(163, 28);
+			this.layoutControlItem5.Size = new System.Drawing.Size(141, 28);
 			this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem5.TextVisible = false;
 			// 
 			// layoutControlItem6
 			// 
 			this.layoutControlItem6.Control = this.btngopban;
-			this.layoutControlItem6.Location = new System.Drawing.Point(1126, 595);
+			this.layoutControlItem6.Location = new System.Drawing.Point(1136, 595);
 			this.layoutControlItem6.Name = "layoutControlItem6";
-			this.layoutControlItem6.Size = new System.Drawing.Size(165, 28);
+			this.layoutControlItem6.Size = new System.Drawing.Size(115, 28);
 			this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem6.TextVisible = false;
 			// 
@@ -312,8 +324,42 @@
 			this.lbTongTien.Size = new System.Drawing.Size(76, 19);
 			this.lbTongTien.TabIndex = 1;
 			// 
+			// emptySpaceItem1
+			// 
+			this.emptySpaceItem1.AllowHotTrack = false;
+			this.emptySpaceItem1.Location = new System.Drawing.Point(1126, 595);
+			this.emptySpaceItem1.Name = "emptySpaceItem1";
+			this.emptySpaceItem1.Size = new System.Drawing.Size(10, 28);
+			this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem2
+			// 
+			this.emptySpaceItem2.AllowHotTrack = false;
+			this.emptySpaceItem2.Location = new System.Drawing.Point(1251, 595);
+			this.emptySpaceItem2.Name = "emptySpaceItem2";
+			this.emptySpaceItem2.Size = new System.Drawing.Size(10, 28);
+			this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem3
+			// 
+			this.emptySpaceItem3.AllowHotTrack = false;
+			this.emptySpaceItem3.Location = new System.Drawing.Point(1739, 595);
+			this.emptySpaceItem3.Name = "emptySpaceItem3";
+			this.emptySpaceItem3.Size = new System.Drawing.Size(10, 28);
+			this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+			// 
+			// emptySpaceItem4
+			// 
+			this.emptySpaceItem4.AllowHotTrack = false;
+			this.emptySpaceItem4.Location = new System.Drawing.Point(1890, 595);
+			this.emptySpaceItem4.Name = "emptySpaceItem4";
+			this.emptySpaceItem4.Size = new System.Drawing.Size(10, 28);
+			this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+			// 
 			// fmDatBan
 			// 
+			this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.Appearance.Options.UseBackColor = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1920, 643);
@@ -334,6 +380,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -362,6 +412,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraEditors.SimpleButton btngopban;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-    }
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+	}
 }
 

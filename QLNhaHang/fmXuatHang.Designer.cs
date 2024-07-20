@@ -142,7 +142,7 @@
 			// 
 			// btnCapNhat
 			// 
-			this.btnCapNhat.Appearance.BackColor = System.Drawing.Color.PaleGreen;
+			this.btnCapNhat.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnCapNhat.Appearance.Options.UseBackColor = true;
 			this.btnCapNhat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCapNhat.ImageOptions.SvgImage")));
 			this.btnCapNhat.Location = new System.Drawing.Point(386, 86);
@@ -155,7 +155,7 @@
 			// 
 			// btnXXoa
 			// 
-			this.btnXXoa.Appearance.BackColor = System.Drawing.Color.PaleGreen;
+			this.btnXXoa.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnXXoa.Appearance.Options.UseBackColor = true;
 			this.btnXXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXXoa.ImageOptions.Image")));
 			this.btnXXoa.Location = new System.Drawing.Point(200, 86);
@@ -168,7 +168,7 @@
 			// 
 			// btnXSua
 			// 
-			this.btnXSua.Appearance.BackColor = System.Drawing.Color.PaleGreen;
+			this.btnXSua.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnXSua.Appearance.Options.UseBackColor = true;
 			this.btnXSua.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXSua.ImageOptions.SvgImage")));
 			this.btnXSua.Location = new System.Drawing.Point(113, 86);
@@ -181,7 +181,7 @@
 			// 
 			// btnXLuu
 			// 
-			this.btnXLuu.Appearance.BackColor = System.Drawing.Color.PaleGreen;
+			this.btnXLuu.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnXLuu.Appearance.Options.UseBackColor = true;
 			this.btnXLuu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXLuu.ImageOptions.SvgImage")));
 			this.btnXLuu.Location = new System.Drawing.Point(289, 86);
@@ -194,7 +194,7 @@
 			// 
 			// btnXThem
 			// 
-			this.btnXThem.Appearance.BackColor = System.Drawing.Color.PaleGreen;
+			this.btnXThem.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnXThem.Appearance.Options.UseBackColor = true;
 			this.btnXThem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXThem.ImageOptions.SvgImage")));
 			this.btnXThem.Location = new System.Drawing.Point(22, 86);
@@ -723,7 +723,7 @@
 			// 
 			// fmXuatHang
 			// 
-			this.Appearance.BackColor = System.Drawing.SystemColors.Info;
+			this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.Appearance.Options.UseBackColor = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

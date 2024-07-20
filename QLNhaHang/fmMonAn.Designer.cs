@@ -193,7 +193,7 @@
 			// 
 			// btnSua
 			// 
-			this.btnSua.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.btnSua.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnSua.Appearance.Options.UseBackColor = true;
 			this.btnSua.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSua.ImageOptions.SvgImage")));
 			this.btnSua.Location = new System.Drawing.Point(127, 63);
@@ -206,7 +206,7 @@
 			// 
 			// btnCapNhat
 			// 
-			this.btnCapNhat.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.btnCapNhat.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnCapNhat.Appearance.Options.UseBackColor = true;
 			this.btnCapNhat.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCapNhat.ImageOptions.SvgImage")));
 			this.btnCapNhat.Location = new System.Drawing.Point(344, 63);
@@ -219,7 +219,7 @@
 			// 
 			// btnThem
 			// 
-			this.btnThem.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.btnThem.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnThem.Appearance.Options.UseBackColor = true;
 			this.btnThem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThem.ImageOptions.SvgImage")));
 			this.btnThem.Location = new System.Drawing.Point(22, 63);
@@ -232,7 +232,7 @@
 			// 
 			// btnXoa
 			// 
-			this.btnXoa.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.btnXoa.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnXoa.Appearance.Options.UseBackColor = true;
 			this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
 			this.btnXoa.Location = new System.Drawing.Point(233, 63);
@@ -245,7 +245,7 @@
 			// 
 			// btnLuu
 			// 
-			this.btnLuu.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.btnLuu.Appearance.BackColor = System.Drawing.Color.Aquamarine;
 			this.btnLuu.Appearance.Options.UseBackColor = true;
 			this.btnLuu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLuu.ImageOptions.SvgImage")));
 			this.btnLuu.Location = new System.Drawing.Point(473, 63);
@@ -510,7 +510,7 @@
 			// 
 			// fmMonAn
 			// 
-			this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.Appearance.Options.UseBackColor = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

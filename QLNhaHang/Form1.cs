@@ -18,6 +18,7 @@ namespace QLNhaHang
         List<int> iddatban = new List<int>();
         public fmDatBan()
         {
+
             InitializeComponent();
             Loadbt(10, 3);
         }
