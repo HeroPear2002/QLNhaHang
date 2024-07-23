@@ -31,8 +31,8 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmNhapHang));
 			this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+			this.txtQr = new System.Windows.Forms.TextBox();
 			this.cbChonCam = new System.Windows.Forms.ComboBox();
-			this.lbPath = new System.Windows.Forms.Label();
 			this.btnCapNhat = new DevExpress.XtraEditors.SimpleButton();
 			this.txtIDNhapHang = new System.Windows.Forms.TextBox();
 			this.txtLuongTon = new System.Windows.Forms.TextBox();
@@ -73,10 +73,10 @@
 			this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.OFdialog = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
 			this.layoutControl1.SuspendLayout();
@@ -105,16 +105,16 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// layoutControl1
 			// 
+			this.layoutControl1.Controls.Add(this.txtQr);
 			this.layoutControl1.Controls.Add(this.cbChonCam);
-			this.layoutControl1.Controls.Add(this.lbPath);
 			this.layoutControl1.Controls.Add(this.btnCapNhat);
 			this.layoutControl1.Controls.Add(this.txtIDNhapHang);
 			this.layoutControl1.Controls.Add(this.txtLuongTon);
@@ -135,25 +135,21 @@
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
+			// txtQr
+			// 
+			this.txtQr.Location = new System.Drawing.Point(42, 12);
+			this.txtQr.Name = "txtQr";
+			this.txtQr.Size = new System.Drawing.Size(211, 20);
+			this.txtQr.TabIndex = 17;
+			// 
 			// cbChonCam
 			// 
 			this.cbChonCam.FormattingEnabled = true;
-			this.cbChonCam.Location = new System.Drawing.Point(151, 12);
+			this.cbChonCam.Location = new System.Drawing.Point(326, 12);
 			this.cbChonCam.Name = "cbChonCam";
-			this.cbChonCam.Size = new System.Drawing.Size(178, 27);
+			this.cbChonCam.Size = new System.Drawing.Size(304, 27);
 			this.cbChonCam.TabIndex = 16;
 			this.cbChonCam.SelectedValueChanged += new System.EventHandler(this.cbChonCam_SelectedValueChanged);
-			// 
-			// lbPath
-			// 
-			this.lbPath.BackColor = System.Drawing.Color.White;
-			this.lbPath.Font = new System.Drawing.Font("Times New Roman", 14F);
-			this.lbPath.ForeColor = System.Drawing.Color.Black;
-			this.lbPath.Location = new System.Drawing.Point(12, 12);
-			this.lbPath.Name = "lbPath";
-			this.lbPath.Size = new System.Drawing.Size(66, 26);
-			this.lbPath.TabIndex = 15;
-			this.lbPath.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// btnCapNhat
 			// 
@@ -170,9 +166,9 @@
 			// 
 			// txtIDNhapHang
 			// 
-			this.txtIDNhapHang.Location = new System.Drawing.Point(431, 12);
+			this.txtIDNhapHang.Location = new System.Drawing.Point(732, 12);
 			this.txtIDNhapHang.Name = "txtIDNhapHang";
-			this.txtIDNhapHang.Size = new System.Drawing.Size(150, 20);
+			this.txtIDNhapHang.Size = new System.Drawing.Size(296, 20);
 			this.txtIDNhapHang.TabIndex = 13;
 			// 
 			// txtLuongTon
@@ -378,12 +374,12 @@
 			// slChonTP
 			// 
 			this.slChonTP.EditValue = "NO";
-			this.slChonTP.Location = new System.Drawing.Point(698, 12);
+			this.slChonTP.Location = new System.Drawing.Point(1145, 12);
 			this.slChonTP.Name = "slChonTP";
 			this.slChonTP.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
 			this.slChonTP.Properties.PopupView = this.searchLookUpEdit1View;
-			this.slChonTP.Size = new System.Drawing.Size(928, 26);
+			this.slChonTP.Size = new System.Drawing.Size(751, 26);
 			this.slChonTP.StyleController = this.layoutControl1;
 			this.slChonTP.TabIndex = 4;
 			// 
@@ -419,10 +415,10 @@
             this.emptySpaceItem7,
             this.emptySpaceItem8,
             this.emptySpaceItem9,
-            this.layoutControlItem12,
             this.layoutControlItem13,
             this.emptySpaceItem10,
-            this.layoutControlItem11});
+            this.layoutControlItem11,
+            this.layoutControlItem12});
 			this.Root.Name = "Root";
 			this.Root.Size = new System.Drawing.Size(1918, 688);
 			this.Root.TextVisible = false;
@@ -432,9 +428,9 @@
 			this.layoutControlItem1.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
 			this.layoutControlItem1.AppearanceItemCaption.Options.UseForeColor = true;
 			this.layoutControlItem1.Control = this.slChonTP;
-			this.layoutControlItem1.Location = new System.Drawing.Point(573, 0);
+			this.layoutControlItem1.Location = new System.Drawing.Point(1020, 0);
 			this.layoutControlItem1.Name = "layoutControlItem1";
-			this.layoutControlItem1.Size = new System.Drawing.Size(1045, 30);
+			this.layoutControlItem1.Size = new System.Drawing.Size(868, 30);
 			this.layoutControlItem1.Text = "Chọn thực phẩm: ";
 			this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.layoutControlItem1.TextSize = new System.Drawing.Size(108, 19);
@@ -547,9 +543,9 @@
 			this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
 			this.layoutControlItem10.AppearanceItemCaption.Options.UseForeColor = true;
 			this.layoutControlItem10.Control = this.txtIDNhapHang;
-			this.layoutControlItem10.Location = new System.Drawing.Point(321, 0);
+			this.layoutControlItem10.Location = new System.Drawing.Point(622, 0);
 			this.layoutControlItem10.Name = "layoutControlItem10";
-			this.layoutControlItem10.Size = new System.Drawing.Size(252, 30);
+			this.layoutControlItem10.Size = new System.Drawing.Size(398, 30);
 			this.layoutControlItem10.Text = "ID Nhập Hàng:";
 			this.layoutControlItem10.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.layoutControlItem10.TextSize = new System.Drawing.Size(93, 19);
@@ -615,9 +611,9 @@
 			// emptySpaceItem8
 			// 
 			this.emptySpaceItem8.AllowHotTrack = false;
-			this.emptySpaceItem8.Location = new System.Drawing.Point(1618, 0);
+			this.emptySpaceItem8.Location = new System.Drawing.Point(1888, 0);
 			this.emptySpaceItem8.Name = "emptySpaceItem8";
-			this.emptySpaceItem8.Size = new System.Drawing.Size(280, 30);
+			this.emptySpaceItem8.Size = new System.Drawing.Size(10, 30);
 			this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
 			// 
 			// emptySpaceItem9
@@ -630,23 +626,14 @@
 			this.emptySpaceItem9.Text = "emptySpaceItem1";
 			this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
 			// 
-			// layoutControlItem12
-			// 
-			this.layoutControlItem12.Control = this.lbPath;
-			this.layoutControlItem12.Location = new System.Drawing.Point(0, 0);
-			this.layoutControlItem12.Name = "layoutControlItem12";
-			this.layoutControlItem12.Size = new System.Drawing.Size(70, 30);
-			this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
-			this.layoutControlItem12.TextVisible = false;
-			// 
 			// layoutControlItem13
 			// 
 			this.layoutControlItem13.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
 			this.layoutControlItem13.AppearanceItemCaption.Options.UseForeColor = true;
 			this.layoutControlItem13.Control = this.cbChonCam;
-			this.layoutControlItem13.Location = new System.Drawing.Point(70, 0);
+			this.layoutControlItem13.Location = new System.Drawing.Point(245, 0);
 			this.layoutControlItem13.Name = "layoutControlItem13";
-			this.layoutControlItem13.Size = new System.Drawing.Size(251, 30);
+			this.layoutControlItem13.Size = new System.Drawing.Size(377, 30);
 			this.layoutControlItem13.Text = "Chọn Cam";
 			this.layoutControlItem13.TextSize = new System.Drawing.Size(66, 19);
 			// 
@@ -666,6 +653,19 @@
 			this.layoutControlItem11.Size = new System.Drawing.Size(219, 40);
 			this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
 			this.layoutControlItem11.TextVisible = false;
+			// 
+			// layoutControlItem12
+			// 
+			this.layoutControlItem12.AppearanceItemCaption.ForeColor = System.Drawing.Color.Black;
+			this.layoutControlItem12.AppearanceItemCaption.Options.UseForeColor = true;
+			this.layoutControlItem12.Control = this.txtQr;
+			this.layoutControlItem12.Location = new System.Drawing.Point(0, 0);
+			this.layoutControlItem12.Name = "layoutControlItem12";
+			this.layoutControlItem12.Size = new System.Drawing.Size(245, 30);
+			this.layoutControlItem12.Text = "QR:";
+			this.layoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
+			this.layoutControlItem12.TextSize = new System.Drawing.Size(25, 19);
+			this.layoutControlItem12.TextToControlDistance = 5;
 			// 
 			// OFdialog
 			// 
@@ -710,10 +710,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -764,9 +764,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
 		private DevExpress.XtraEditors.XtraOpenFileDialog OFdialog;
-		private System.Windows.Forms.Label lbPath;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
 		private System.Windows.Forms.ComboBox cbChonCam;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+		private System.Windows.Forms.TextBox txtQr;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
 	}
 }

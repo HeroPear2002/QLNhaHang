@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DAO;
+using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 
 namespace QLNhaHang
 {
@@ -63,5 +65,15 @@ namespace QLNhaHang
         {
             OpemForm(typeof(fmMonAn));
         }
-    }
+
+		private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			using (XtraOpenFileDialog Opfile = new XtraOpenFileDialog() { Filter = "Excel Workbook|*.xls;*.xlsx" })
+			{
+				Opfile.ShowDialog();
+				XtraReport1 report1 = new XtraReport1(Opfile.FileName, Opfile.SafeFileName);
+				report1.ShowPreviewDialog();
+			}
+		}
+	}
 }

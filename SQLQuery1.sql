@@ -10,7 +10,7 @@ CREATE TABLE tb_ThucPham (
 );
 CREATE TABLE tb_File (
 	IDFile int IDENTITY(1,1) PRIMARY KEY,
-    TenFile nvarchar(50),
+    TenFile nvarchar(50)
     
 );
 CREATE TABLE tb_NhapHang (

@@ -31,6 +31,7 @@ namespace QLNhaHang
 		DataTableCollection data;
 		private void LoadControl()
         {
+			txtQr.Focus();
             LockControl(true);
             CleanText();
             LoadData();
@@ -122,7 +123,7 @@ namespace QLNhaHang
 		private void btnThem_Click(object sender, EventArgs e)
         {
 			DataTable data = NhapHangDAO.Instance.TenFile();
-			if (lbPath.Text == "")
+			if (txtQr.Text == "")
 			{
 				using (XtraOpenFileDialog Opfile = new XtraOpenFileDialog() { Filter = "Excel Workbook|*.xls;*.xlsx" })
 				{
@@ -136,8 +137,8 @@ namespace QLNhaHang
 								return;
 							}
 						}
-						bool insertfile = NhapHangDAO.Instance.insertFile(Opfile.SafeFileName);
 						OpenFile(Opfile.FileName);
+						bool insertfile = NhapHangDAO.Instance.insertFile(Opfile.SafeFileName);
 					}
 				}
 			}
@@ -148,27 +149,27 @@ namespace QLNhaHang
 				string[] File = Directory.GetFiles(path);
 				foreach (string item in File)
 				{
-					if(item == lbPath.Text + ".xlsx")
+					if(item == txtQr.Text + ".xlsx")
 					{
-						lbPath.Text = lbPath.Text + ".xlsx";
-						pathfull = Path.Combine(path, lbPath.Text);
+						txtQr.Text = txtQr.Text + ".xlsx";
+						pathfull = Path.Combine(path, txtQr.Text);
 					}
-					else if(item == lbPath.Text + ".xls")
+					else if(item == txtQr.Text + ".xls")
 					{
-						lbPath.Text = lbPath.Text + ".xls";
-						pathfull = Path.Combine(path, lbPath.Text);
+						txtQr.Text = txtQr.Text + ".xls";
+						pathfull = Path.Combine(path, txtQr.Text);
 					}
 				}
 				foreach (DataRow row in data.Rows)
 				{
-					if (row["TenFile"].ToString() == lbPath.Text)
+					if (row["TenFile"].ToString() == txtQr.Text)
 					{
 						MessageBox.Show("Đã nhập file này rồi.");
 						return;
 					}
 				}
-				bool insertfile = NhapHangDAO.Instance.insertFile(lbPath.Text);
-				OpenFile(lbPath.Text);
+				OpenFile(txtQr.Text);
+				bool insertfile = NhapHangDAO.Instance.insertFile(txtQr.Text);
 			}
 			LoadControl();
 		}
@@ -185,12 +186,19 @@ namespace QLNhaHang
 					data = result.Tables;
 					foreach (DataTable dataTable in data)
 					{
-						foreach(DataRow row in dataTable.Rows)
+						if(dataTable.TableName == "table")
 						{
-							int idthucpham = int.Parse(row["IDThucPham"].ToString());
-							int soluongnhap = int.Parse(row["SoLuong"].ToString());
-							DateTime ngaynhap = DateTime.Now;
-							bool insert = NhapHangDAO.Instance.Insert(idthucpham, soluongnhap, ngaynhap);
+							foreach(DataRow row in dataTable.Rows)
+							{
+								string tenthucpham = row[1].ToString();
+								if (tenthucpham != "0" && tenthucpham != "")
+								{
+									int idthucpham = NhapHangDAO.Instance.TenThucPham(tenthucpham);
+									int soluongnhap = int.Parse(row[3].ToString());
+									DateTime ngaynhap = DateTime.Now;
+									bool insert = NhapHangDAO.Instance.Insert(idthucpham, soluongnhap, ngaynhap);
+								}
+							}
 						}
 					}
 				}
@@ -274,7 +282,7 @@ namespace QLNhaHang
 			var result = reader.Decode(bitmap);
 			if(result != null)
 			{
-				lbPath.Text = result.ToString();
+				txtQr.Text = result.ToString();
 			}
 		}
 	}

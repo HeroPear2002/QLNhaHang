@@ -117,10 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Opfile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="excelDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>101, 17</value>
+  <data name="excelDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PFZpZXc+PEZpZWxkIE5hbWU9IkNvbHVtbjEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29sdW1uMiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb2x1bW4zIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvbHVtbjQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29sdW1uNSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb2x1bW42IiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3Pg==</value>
+  </data>
+  <metadata name="excelDataSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <data name="excelDataSource2.ResultSchemaSerializable" xml:space="preserve">
+    <value>PFZpZXc+PEZpZWxkIE5hbWU9IkNvbHVtbjEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29sdW1uMiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb2x1bW4zIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvbHVtbjQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29sdW1uNSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb2x1bW42IiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3Pg==</value>
+  </data>
+  <metadata name="excelDataSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <data name="excelDataSource3.ResultSchemaSerializable" xml:space="preserve">
+    <value>PFZpZXc+PEZpZWxkIE5hbWU9IkNvbHVtbjEiIFR5cGU9IkRvdWJsZSIgLz48RmllbGQgTmFtZT0iQ29sdW1uMiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb2x1bW4zIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvbHVtbjQiIFR5cGU9IkRvdWJsZSIgLz48RmllbGQgTmFtZT0iQ29sdW1uNSIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSJDb2x1bW42IiBUeXBlPSJEb3VibGUiIC8+PC9WaWV3Pg==</value>
+  </data>
+  <metadata name="objectDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
+  </metadata>
+  <metadata name="objectDataSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 173</value>
   </metadata>
 </root>

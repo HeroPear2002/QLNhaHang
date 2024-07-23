@@ -85,5 +85,12 @@ namespace DAO
 			int data = Dataprovider.Instance.ExecuteNonQuery(query, new object[] { tenfile });
 			return data > 0;
 		}
+		public int TenThucPham(string tenthucpham)
+		{
+			string query = "Select IDThucPham from tb_ThucPham where TenThucPham = @1 ";
+			object data = new object();
+			data = Dataprovider.Instance.ExecuteScalar(query, new object[] { tenthucpham });
+			return (int)data;
+		}
     }
 }

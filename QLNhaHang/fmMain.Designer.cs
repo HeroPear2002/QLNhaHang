@@ -45,6 +45,9 @@
 			this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
 			this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
 			this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+			this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+			this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+			this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -60,9 +63,10 @@
             this.btnNhapHang,
             this.btnXuatHang,
             this.btnThemCongThuc,
-            this.btnMonAn});
+            this.btnMonAn,
+            this.barButtonItem1});
 			this.ribbon.Location = new System.Drawing.Point(0, 0);
-			this.ribbon.MaxItemId = 6;
+			this.ribbon.MaxItemId = 7;
 			this.ribbon.Name = "ribbon";
 			this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -116,7 +120,8 @@
             this.ribbonPageGroup2,
             this.ribbonPageGroup3,
             this.ribbonPageGroup4,
-            this.ribbonPageGroup5});
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup6});
 			this.ribbonPage1.Name = "ribbonPage1";
 			this.ribbonPage1.Text = "Quản lý nhà hàng";
 			// 
@@ -160,6 +165,23 @@
 			this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
 			// 
+			// ribbonPageGroup6
+			// 
+			this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem1);
+			this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+			// 
+			// barButtonItem1
+			// 
+			this.barButtonItem1.Caption = "QRCode";
+			this.barButtonItem1.Id = 6;
+			this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+			this.barButtonItem1.Name = "barButtonItem1";
+			this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+			// 
+			// xtraOpenFileDialog1
+			// 
+			this.xtraOpenFileDialog1.FileName = "xtraOpenFileDialog1";
+			// 
 			// fmMain
 			// 
 			this.Appearance.BackColor = System.Drawing.SystemColors.Control;
@@ -201,5 +223,8 @@
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
         private DevExpress.XtraBars.BarButtonItem btnMonAn;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-    }
+		private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+		private DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog1;
+	}
 }
