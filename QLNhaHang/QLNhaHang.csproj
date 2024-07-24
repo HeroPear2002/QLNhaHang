@@ -278,11 +278,11 @@
     <Compile Include="fmNhapHang.Designer.cs">
       <DependentUpon>fmNhapHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmTest.cs">
+    <Compile Include="fmThucPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmTest.Designer.cs">
-      <DependentUpon>fmTest.cs</DependentUpon>
+    <Compile Include="fmThucPham.Designer.cs">
+      <DependentUpon>fmThucPham.cs</DependentUpon>
     </Compile>
     <Compile Include="fmXuatHang.cs">
       <SubType>Form</SubType>
@@ -320,8 +320,8 @@
     <EmbeddedResource Include="fmNhapHang.resx">
       <DependentUpon>fmNhapHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmTest.resx">
-      <DependentUpon>fmTest.cs</DependentUpon>
+    <EmbeddedResource Include="fmThucPham.resx">
+      <DependentUpon>fmThucPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmXuatHang.resx">
       <DependentUpon>fmXuatHang.cs</DependentUpon>

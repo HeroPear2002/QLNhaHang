@@ -75,5 +75,10 @@ namespace QLNhaHang
 				report1.ShowPreviewDialog();
 			}
 		}
+
+		private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			OpemForm(typeof(fmThucPham));
+		}
 	}
 }

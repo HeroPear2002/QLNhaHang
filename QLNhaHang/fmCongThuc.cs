@@ -153,15 +153,18 @@ namespace QLNhaHang
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             DataTable data = (DataTable)gridControl1.DataSource;
-            foreach (DataRow item in data.Rows)
-            {
-                if (item.RowState == DataRowState.Modified)
-                {
-                    int idchitietct = int.Parse(item["IDChiTietCT"].ToString());
-                    float dinhluong = float.Parse(item["DinhLuong"].ToString());
-                    bool kq = ChiTietCTDAO.Instance.Update(idchitietct, dinhluong);
-                }
-            }
+			if (data != null)
+			{
+				foreach (DataRow item in data.Rows)
+				{
+					if (item.RowState == DataRowState.Modified)
+					{
+						int idchitietct = int.Parse(item["IDChiTietCT"].ToString());
+						float dinhluong = float.Parse(item["DinhLuong"].ToString());
+						bool kq = ChiTietCTDAO.Instance.Update(idchitietct, dinhluong);
+					}
+				}
+			}
             LoadControl();
         }
         private void btnLuu_Click(object sender, EventArgs e)

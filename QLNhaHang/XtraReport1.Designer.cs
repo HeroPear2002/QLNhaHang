@@ -553,16 +553,6 @@
 			excelSourceOptions3.UseFirstRowAsHeader = false;
 			this.excelDataSource3.SourceOptions = excelSourceOptions3;
 			// 
-			// objectDataSource1
-			// 
-			this.objectDataSource1.DataSource = typeof(ExcelDataReader.ExcelDataTableConfiguration);
-			this.objectDataSource1.Name = "objectDataSource1";
-			// 
-			// objectDataSource2
-			// 
-			this.objectDataSource2.DataSource = typeof(QLNhaHang.fmTest);
-			this.objectDataSource2.Name = "objectDataSource2";
-			// 
 			// XtraReport1
 			// 
 			this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {

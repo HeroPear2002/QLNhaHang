@@ -209,6 +209,7 @@
     <Compile Include="MonAnTDTO.cs" />
     <Compile Include="NhapHangDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLThucPhamDTO.cs" />
     <Compile Include="ThucPhamDTO.cs" />
     <Compile Include="XuatHangDTO.cs" />
   </ItemGroup>
