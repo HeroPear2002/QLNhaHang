@@ -37,6 +37,7 @@
 			this.btnThemCongThuc = new DevExpress.XtraBars.BarButtonItem();
 			this.btnMonAn = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+			this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
 			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -44,12 +45,11 @@
 			this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+			this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
 			this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
 			this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
 			this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
-			this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -124,6 +124,14 @@
 			this.barButtonItem1.Name = "barButtonItem1";
 			this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
 			// 
+			// barButtonItem2
+			// 
+			this.barButtonItem2.Caption = "Thực Phẩm";
+			this.barButtonItem2.Id = 7;
+			this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+			this.barButtonItem2.Name = "barButtonItem2";
+			this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+			// 
 			// ribbonPage1
 			// 
 			this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -167,6 +175,11 @@
 			this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem1);
 			this.ribbonPageGroup6.Name = "ribbonPageGroup6";
 			// 
+			// ribbonPageGroup7
+			// 
+			this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem2);
+			this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+			// 
 			// ribbonStatusBar
 			// 
 			this.ribbonStatusBar.Location = new System.Drawing.Point(0, 895);
@@ -185,19 +198,6 @@
 			// xtraOpenFileDialog1
 			// 
 			this.xtraOpenFileDialog1.FileName = "xtraOpenFileDialog1";
-			// 
-			// ribbonPageGroup7
-			// 
-			this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem2);
-			this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-			// 
-			// barButtonItem2
-			// 
-			this.barButtonItem2.Caption = "Thực Phẩm";
-			this.barButtonItem2.Id = 7;
-			this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-			this.barButtonItem2.Name = "barButtonItem2";
-			this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
 			// 
 			// fmMain
 			// 

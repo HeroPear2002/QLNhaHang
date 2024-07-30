@@ -94,13 +94,6 @@ namespace QLNhaHang
 				}
 				MessageBox.Show("That Bai");
 			}
-
-
-		}
-
-		private void fmTest_Load(object sender, EventArgs e)
-		{
-		
 		}
 
 		private void btnThem_Click(object sender, EventArgs e)
